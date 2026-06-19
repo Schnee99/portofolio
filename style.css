@@ -1,0 +1,44 @@
+
+body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1c22 0%, #a72e3f 45%, #8c1740 85%, #f7b267 100%);
+      position: relative;
+      color: #181920;
+    }
+body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: url('https://i.pinimg.com/originals/89/2a/2d/892a2db7e7e7b5f6ebc0b2c5fcb6e7ad.jpg') no-repeat center top/cover;
+      opacity: 0.13;
+      pointer-events: none;
+      filter: blur(3px) brightness(1.1);
+}
+,container{
+    position: relative;
+    z-index: 2;
+    max-width: 830px;
+    margin: 44px auto 24px auto;
+    padding: 36px 44px 36px 44px;
+    border-radius: 25px;
+    background: rgba(34, 21, 31, 0.48);
+    box-shadow: 0 8px 32px rgba(167, 46,  0.18),0 1,5px 6px rgba(0,0,0,0.13) 
+    backdrop-filter:blur(5);
+    border: 1.5px solid rgba(167, 46, 63, 0.11) ;
+}
+.profile-header {
+    text-align: center  ;
+    margin-bottom:  35% ;
+}
+.profile-image {
+    width: 122px;
+    height: 122px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #a72e3f;
+}
