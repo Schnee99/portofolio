@@ -1,4 +1,4 @@
-const canvas = document.getElementById("kurumi-bg");
+const canvas = document.querySelector(".profile-img");
 const ctx = canvas.getContext("2d");
 
 function resizeCanvas() {
