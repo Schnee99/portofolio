@@ -1,5 +1,5 @@
 
-body {
+    body {
       font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -8,7 +8,7 @@ body {
       position: relative;
       color: #181920;
     }
-body::before {
+    body::before {
       content: "";
       position: fixed;
       inset: 0;
@@ -17,28 +17,140 @@ body::before {
       opacity: 0.13;
       pointer-events: none;
       filter: blur(3px) brightness(1.1);
-}
-,container{
-    position: relative;
-    z-index: 2;
-    max-width: 830px;
-    margin: 44px auto 24px auto;
-    padding: 36px 44px 36px 44px;
-    border-radius: 25px;
-    background: rgba(34, 21, 31, 0.48);
-    box-shadow: 0 8px 32px rgba(167, 46,  0.18),0 1,5px 6px rgba(0,0,0,0.13) 
-    backdrop-filter:blur(5);
-    border: 1.5px solid rgba(167, 46, 63, 0.11) ;
-}
-.profile-header {
-    text-align: center  ;
-    margin-bottom:  35% ;
-}
-.profile-image {
-    width: 122px;
-    height: 122px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid #a72e3f;
-}
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 830px;
+      margin: 44px auto 24px auto;
+      padding: 36px 44px 36px 44px;
+      border-radius: 25px;
+      background: rgba(34, 21, 31, 0.48);
+      box-shadow: 0 8px 32px rgba(167, 46, 63, 0.18), 0 1.5px 6px rgba(0,0,0,0.13);
+      backdrop-filter: blur(6px);
+      border: 1.5px solid rgba(167, 46, 63, 0.11);
+    }
+    .profile-header {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+    .profile-img {
+      width: 122px;
+      height: 122px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3.5px solid #a72e3f;
+      box-shadow: 0 2px 14px rgba(167,46,63,0.29), 0 0 0 7px #1a1c220b;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.45em;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #a72e3f;
+      text-shadow: 0 1px 6px #1a1c2299, 0 0.5px 1px #f7b267aa;
+    }
+    .bio {
+      color: #f7b267;
+      font-size: 1.14em;
+      margin-bottom: 20px;
+      font-weight: 400;
+      background: rgba(167,46,63,0.14);
+      padding: 8px 0;
+      border-radius: 6px;
+      display: inline-block;
+      text-shadow: 0 1px 6px #1a1c22;
+    }
+    .section-title {
+      margin-top: 35px;
+      font-size: 1.35em;
+      color: #f7b267;
+      border-bottom: 2.2px solid #a72e3f;
+      padding-bottom: 6px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 6px #a72e3f99;
+    }
+    .projects {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 1fr;
+      margin-top: 10px;
+    }
+    .project {
+      background: rgba(167,46,63,0.22);
+      padding: 19px 20px 14px 20px;
+      border-radius: 14px;
+      box-shadow: 0 2px 15px rgba(167,46,63,0.16);
+      border: 1.2px solid #f7b267;
+      transition: box-shadow 0.2s, transform 0.15s, border 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .project::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: linear-gradient(120deg, #a72e3f 5%, #8c1740 95%);
+      opacity: 0.16;
+      z-index: 0;
+    }
+    .project-title {
+      font-size: 1.18em;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #f7b267;
+      letter-spacing: 0.7px;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 1px 4px #8c174099;
+    }
+    .project-desc {
+      font-size: 1em;
+      color: #fff9ee;
+      margin-bottom: 10px;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 1px 6px #1a1c22;
+    }
+    .project-link {
+      color: #a72e3f;
+      text-decoration: none;
+      font-size: 0.98em;
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+      background: #f7b267;
+      padding: 5px 12px;
+      border-radius: 7px;
+      transition: background .18s, color .18s;
+      box-shadow: 0 1px 6px #8c174099;
+    }
+    .project-link:hover {
+      text-decoration: underline;
+      background: #a72e3f;
+      color: #fff;
+    }
+    .project:hover {
+      box-shadow: 0 6px 22px rgba(167,46,63,0.32), 0 1.5px 6px rgba(0,0,0,0.08);
+      transform: translateY(-3px) scale(1.021);
+      border: 1.8px solid #f7b267;
+    }
+    @media (min-width: 650px) {
+      .projects {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 18px 5vw; }
+      h1 { font-size: 1.5em; }
+      .section-title { font-size: 1.05em;}
+      .profile-img { width: 88px; height: 88px;}
+    }
+  
